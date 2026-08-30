@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Safeguard against polyfills attempting to assign to window.fetch in environments where it is getter-only
+      (function() {
+        try {
+          var originalFetch = window.fetch;
+          var customFetch = originalFetch;
+          Object.defineProperty(window, 'fetch', {
+            get: function() {
+              return customFetch || originalFetch;
+            },
+            set: function(fn) {
+              customFetch = fn;
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {
+          // No-op if property is not reconfigurable
+        }
+      })();
+    </script>
+    <title>Hòm Thư Tố Giác Tội Phạm Số - Công An Xã Đức Hợp</title>
+    <meta name="description" content="Hệ thống tiếp nhận, xử lý tin báo, tố giác tội phạm và phản ánh an ninh trật tự - Công an xã Đức Hợp, tỉnh Hưng Yên." />
+    <meta property="og:title" content="Hòm Thư Tố Giác Tội Phạm Số - Công An Xã Đức Hợp" />
+    <meta property="og:description" content="Hệ thống số hóa tiếp nhận tin báo, tố giác tội phạm trực tuyến - Công an xã Đức Hợp, tỉnh Hưng Yên." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-slate-50 text-slate-900 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

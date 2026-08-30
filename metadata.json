@@ -1,0 +1,6 @@
+{
+  "name": "Hòm Thư Tố Giác Tội Phạm Số - Công An Xã Đức Hợp",
+  "description": "Hệ thống tiếp nhận, xử lý tin báo, tố giác tội phạm và phản ánh an ninh trật tự - Công an xã Đức Hợp, tỉnh Hưng Yên.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
